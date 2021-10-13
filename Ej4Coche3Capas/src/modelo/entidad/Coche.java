@@ -33,7 +33,7 @@ public class Coche {
 	
 	@Override
 	public String toString() {
-		return "Persona [matricula=" + matricula + ", marca=" + marca + ", edad=" + modelo + ", kilometros=" + kilometros + "]";
+		return "Coche [matricula=" + matricula + ", marca=" + marca + ", edad=" + modelo + ", kilometros=" + kilometros + "]";
 	}
 	
 }

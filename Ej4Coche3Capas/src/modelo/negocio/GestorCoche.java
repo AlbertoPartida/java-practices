@@ -40,18 +40,32 @@ public class GestorCoche {
 		return baja;
 	}
 	
-	public boolean modificar(Coche c){
+	public boolean modificar(Coche c) throws Exception{
 		//aplicamos la regla de negocio
-		if(c.getMatricula().length() == 7) {
+		if(c.getMatricula().length() < 1) {
+			throw new Exception("La matricula del coche es obligatoria");
+		}else if(c.getMarca().length() < 1) {
+			throw new Exception("La marca del coche es obligatoria");
+		}else if(c.getModelo().length() < 1) {
+			throw new Exception("El modelo del coche es obligatorio");
+		}else if(c.getMatricula().length() == 7) {
 			boolean modificada = cocheDao.modificar(c);
 			return modificada;
+		} else {
+			throw new Exception("La matricula debe tener 7 caracteres");
 		}
-		return false;
+		
 	}
 	
-	public Coche obtener(String matricula){
-		Coche coche = cocheDao.obtener(matricula);
-		return coche;
+	public Coche obtener(String matricula) throws Exception{
+		if(matricula.length() < 1) {
+			throw new Exception("La matricula del coche es obligatoria");
+		}else if(matricula.length() == 7) {
+			Coche coche = cocheDao.obtener(matricula);
+			return coche;
+		} else {
+			throw new Exception("La matricula debe tener 7 caracteres");
+		}	
 	}
 	
 	public List<Coche> listar(){

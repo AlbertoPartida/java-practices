@@ -7,7 +7,7 @@ import modelo.negocio.GestorCoche;
 
 public class TestObtenerCoche {
 	public static void main(String[] args) {
-		String matricula = "888BRZ";
+		String matricula = "      ";
 		GestorCoche gc = new GestorCoche();
 		try {
 			Coche coche = gc.obtener(matricula);

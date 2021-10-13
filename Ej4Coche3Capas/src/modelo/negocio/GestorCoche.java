@@ -42,7 +42,7 @@ public class GestorCoche {
 	
 	public boolean modificar(Coche c) throws Exception{
 		//aplicamos la regla de negocio
-		if(c.getMatricula().length() < 1) {
+		if(c.getMatricula().isEmpty()) {
 			throw new Exception("La matricula del coche es obligatoria");
 		}else if(c.getMarca().length() < 1) {
 			throw new Exception("La marca del coche es obligatoria");
@@ -58,7 +58,7 @@ public class GestorCoche {
 	}
 	
 	public Coche obtener(String matricula) throws Exception{
-		if(matricula.length() < 1) {
+		if(matricula.isEmpty()) {
 			throw new Exception("La matricula del coche es obligatoria");
 		}else if(matricula.length() == 7) {
 			Coche coche = cocheDao.obtener(matricula);

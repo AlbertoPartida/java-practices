@@ -1,9 +1,7 @@
 package test;
 
 import modelo.entidad.Coche;
-import modelo.entidad.Persona;
 import modelo.negocio.GestorCoche;
-import modelo.negocio.GestorPersona;
 
 public class TestModificarCoche {
 	public static void main(String[] args) {

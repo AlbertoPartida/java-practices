@@ -20,11 +20,11 @@ public class GestorCoche {
 	
 	public boolean alta(Coche c) throws Exception{
 		//aplicamos la regla de negocio
-		if(c.getMatricula().length() < 1) {
+		if(c.getMatricula().isEmpty()) {
 			throw new Exception("La matricula del coche es obligatoria");
-		}else if(c.getMarca().length() < 1) {
+		}else if(c.getMarca().isEmpty()) {
 			throw new Exception("La marca del coche es obligatoria");
-		}else if(c.getModelo().length() < 1) {
+		}else if(c.getModelo().isEmpty()) {
 			throw new Exception("El modelo del coche es obligatorio");
 		}else if(c.getMatricula().length() == 7) {
 			boolean alta = cocheDao.alta(c);
@@ -44,9 +44,9 @@ public class GestorCoche {
 		//aplicamos la regla de negocio
 		if(c.getMatricula().isEmpty()) {
 			throw new Exception("La matricula del coche es obligatoria");
-		}else if(c.getMarca().length() < 1) {
+		}else if(c.getMarca().isEmpty()) {
 			throw new Exception("La marca del coche es obligatoria");
-		}else if(c.getModelo().length() < 1) {
+		}else if(c.getModelo().isEmpty()) {
 			throw new Exception("El modelo del coche es obligatorio");
 		}else if(c.getMatricula().length() == 7) {
 			boolean modificada = cocheDao.modificar(c);

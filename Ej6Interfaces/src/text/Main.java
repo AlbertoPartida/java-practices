@@ -18,10 +18,10 @@ public class Main {
 		Vehiculo moto = new Moto("2",75,"Honda");
 //		moto.mover(2);
 		
-		Vehiculo avion = new Avion("3", 4, "Eurofighter");
+		Vehiculo avion = new Avion("3", 1, "Eurofighter");
 //		avion.mover(2);
 		
-		Vehiculo barco = new Barco("4", 3, "La Santa Maria");
+		Vehiculo barco = new Barco("4", 5, "La Santa Maria");
 //		barco.mover(5);
 		
 		ArrayList<Vehiculo> array = new ArrayList<>();
@@ -34,7 +34,7 @@ public class Main {
 		for (Vehiculo vehiculo: array) {
 			vehiculo.mover(5);
 		}
-					
+		
 	}
 
 }

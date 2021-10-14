@@ -1,10 +1,8 @@
 package entidades;
 
 import interfaz.Movible;
-import interfaz.MovibleAvion;
-import interfaz.MovibleBarco;
 
-public class Vehiculo implements Movible, MovibleBarco, MovibleAvion{
+public class Vehiculo implements Movible{
 
 	 String id;
 	 int caballos;
@@ -16,7 +14,10 @@ public class Vehiculo implements Movible, MovibleBarco, MovibleAvion{
 		this.nombre = nombre;
 	}
 	
-	
+	@Override
+	public void mover(int distancia) {
+		System.out.println("paso por vehiculo");
+	}
 
 	public String getId() {
 		return id;
@@ -41,18 +42,6 @@ public class Vehiculo implements Movible, MovibleBarco, MovibleAvion{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	@Override
-	public void mover(int distancia) {
-		if(this instanceof Moto || this instanceof Coche) {
-			Movible.super.mover(distancia,this);
-		}
-		if(this instanceof Barco) {
-			MovibleBarco.super.mover(distancia + (this.caballos*2));
-		}
-		if(this instanceof Avion) {
-			MovibleAvion.super.mover(distancia + (this.caballos*3));
-		}
-	}
+	
 	
 }

@@ -1,12 +1,15 @@
 package entidades;
 
+import interfaz.Movible;
+
 public class Coche extends Vehiculo  {
 
+	
 	public Coche(String id, int caballos, String nombre) {
 		super(id, caballos, nombre);
 	}
 
-/*	@Override
+	@Override
 	public void mover(int distancia) {
 		
 		for(int i=1; i<distancia+1; i++) {
@@ -19,5 +22,4 @@ public class Coche extends Vehiculo  {
 			}
 		}	
 	}
-				*/
 }

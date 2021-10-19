@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Como hemos visto en ejemplos anteriores podemos crear todos los objetos
+	superheroes que queramos -->
+	<bean id="spiderman" class="ejemplo03.Superheroe" scope="singleton">
+		<property name="id" value="01"></property>
+		<property name="nombre" value="Peter Parker"></property>
+		<property name="nombreSuperheroe" value="Spider-Man"></property>
+		<property name="poder" value="125"></property>
+		<property name="superPoder" value="poder de una araña"></property>
+	</bean>
+	
+	<bean id="deadpool" class="ejemplo03.Superheroe" scope="singleton">
+		<property name="id" value="02"></property>
+		<property name="nombre" value="Wade Wilson"></property>
+		<property name="nombreSuperheroe" value="Deadpool"></property>
+		<property name="poder" value="150"></property>
+		<property name="superPoder" value="curacion"></property>
+	</bean>
+	
+	<bean id="drstrange" class="ejemplo03.Superheroe" scope="singleton">
+		<property name="id" value="03"></property>
+		<property name="nombre" value="Stephen Strange"></property>
+		<property name="nombreSuperheroe" value="Dr. Strange"></property>
+		<property name="poder" value="125"></property>
+		<property name="superPoder" value="generacion de ilusiones"></property>
+	</bean>
+	
+	
+	<!-- Tambien tenemos casos, los cuales queremos que cuando le pidamos
+	un objeto a Spring, nos devuevla un objeto nuevo, es decir, no sea singleton.
+	Para este tipo de casos podemos establecer un nuevo scope, que sería 
+	"prototype". Este objeto creado será un objeto que se tomará como molde
+	a la hora de crear los demas objetos.
+	Ojo, en este caso cuando le pedimos al contexto un objeto de este tipo,
+	el contexto nos devuelve un objeto nuevo creado, cuyo ciclo de vida no
+	depende de Spring, depende del programador.
+	 -->
+	<bean id="superheroesPrototype" class="ejemplo03.Superheroe" scope="prototype">
+		<property name="poder" value="100"></property>
+	</bean>
+	
+	<bean id="superheroesPrototype2" class="ejemplo03.Superheroe" scope="prototype">
+		<property name="superPoder" value="volar"></property>
+	</bean>
+	
+	<!-- Podemos dar de alta en nuestro contexto de Spring cualquier objeto
+		que tengamos en nuestro classpath. Esta lista me la creo para poder
+		guardar los objeto prototipados que en algun momento cree en la
+		aplicacion. Esta lista si que va a ser singleton porque quiero 
+		que el objeto sea unico
+	 -->
+	<bean id="listaSuperheroes" class="java.util.ArrayList"></bean>
+	
+	<bean id="listaSuperheroes2" class="java.util.ArrayList"></bean>
+</beans>

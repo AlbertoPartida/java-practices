@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Dao Ordenador -->
+	<bean id="daoOrdenador" class="modelo.persistencia.DaoOrdenador"></bean>
+
+	<!-- Gestor Ordenador -->
+	<bean id="gestorOrdenador" class="modelo.negocio.GestorOrdenador" autowire="byType">
+		<property name="nombreFichero" value="ordenador.txt"></property>
+	</bean>
+
+	<!-- Clase Marca -->
+	<bean id="marca" class="modelo.entidad.Marca">
+		<property name="listaMarcas">
+			<array value-type="java.lang.String">
+				<value>MSI</value>
+				<value>HP</value>
+				<value>ASUS</value>
+				<value>DELL</value>
+				<value>LENOVO</value>
+			</array>
+		</property>
+	</bean>
+	
+	<!--  Otra forma de crear un array de string  
+	<bean id="marca" class="modelo.entidad.Marca">
+		<property name="myStrings" value="A,B,C,D"/>
+	</bean> 	-->
+
+	<!-- Placa Base -->
+	<bean id="msimag" class="modelo.entidad.PlacaBase">
+		<property name="marca" value="#{marca.getMarca()}"></property>
+		<property name="model" value="MAG X570"></property>
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 1000 )}"></property>
+	</bean>
+
+	<!-- RAMS -->
+	<bean id="corsair" class="modelo.entidad.Ram">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 700 )}"></property> 
+		<property name="hz" value="3200"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	
+	<bean id="kingston" class="modelo.entidad.Ram">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 500 )}"></property> 
+		<property name="hz" value="3200"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	
+	<bean id="goodram" class="modelo.entidad.Ram">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 500 )}"></property> 
+		<property name="hz" value="2400"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	<bean id="goodram2" class="modelo.entidad.Ram">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 500 )}"></property> 
+		<property name="hz" value="3200"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	
+	<!-- Lista de RAMS -->
+	<bean id="listRam" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="modelo.entidad.Ram">
+				<ref bean="corsair"/>
+				<ref bean="kingston"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- Procesador -->
+	<bean id="amd" class="modelo.entidad.Procesador">
+		<property name="marca" value="#{marca.getMarca()}"></property>
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 1000 )}"></property>
+		<property name="hz" value="39"></property>
+	</bean>
+	
+	<!-- Tarjetas Graficas -->
+	<bean id="gigabyte" class="modelo.entidad.TarjetaGrafica">
+		<property name="marca" value="Gigabyte"></property>
+		<property name="ram" ref="goodram"></property>
+		<property name="modelo" value="GeForce GTX1660"></property>
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 1000 )}"></property>
+	</bean>
+	
+	<bean id="msi" class="modelo.entidad.TarjetaGrafica">
+		<property name="marca" value="MSI"></property>
+		<property name="ram" ref="goodram2"></property>
+		<property name="modelo" value="GeForce RTX3070"></property>
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 2000 )}"></property>
+	</bean>
+	
+	<!-- Lista de Tarjetas Graficas -->
+	<bean id="listGraficas" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="modelo.entidad.TarjetaGrafica">
+				<ref bean="gigabyte"/>
+				<ref bean="msi"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- Perifericos -->
+	<bean id="monitor" class="modelo.entidad.Monitor">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 1000 )}"></property>
+		<property name="marca" value="HP"></property>
+		<property name="hz" value="166"></property>
+		<property name="tamaño" value="25"></property>
+	</bean>
+	
+	<bean id="raton" class="modelo.entidad.Raton">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 700 )}"></property>
+		<property name="marca" value="Logitech"></property>
+		<property name="botones" value="5"></property>
+		<property name="inalambrico" value="true"></property>
+	</bean>
+	
+	<bean id="teclado" class="modelo.entidad.Teclado">
+		<property name="precio" value="#{T(java.lang.Math).round(T(java.lang.Math).random() * 500 )}"></property>
+		<property name="marca" value="The G-LAB"></property>
+		<property name="tipo" value="Mecánico"></property>
+	</bean>
+	
+	<!-- Lista de Perifericos -->
+	<bean id="listPerifericos" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="modelo.entidad.Perifericos">
+				<ref bean="monitor"/>
+				<ref bean="raton"/>
+				<ref bean="teclado"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- Ordenador -->
+	<bean id="ordenador" class="modelo.entidad.Ordenador" autowire="byType">
+		<property name="marca" value="MSI"></property>
+	</bean>
+	
+</beans>

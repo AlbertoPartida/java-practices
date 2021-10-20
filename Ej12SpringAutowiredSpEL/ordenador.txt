@@ -1,0 +1,24 @@
+Computer [id=0, marca=MSI, precio=5107.0€ 
+ 	 - Procesador=Procesador [id=0, precio=71.0, hz=39.0, marca=HP]
+ 	 - PlacaBase=PlacaBase [id=0, marca=HP, model=MAG X570, precio=467€]
+ 	 - Rams=[Ram [id= 0precio=577.0€, hz=3200.0, generacion=16], Ram [id= 0precio=44.0€, hz=3200.0, generacion=16], Ram [id= 0precio=260.0€, hz=2400.0, generacion=16], Ram [id= 0precio=296.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=0, marca=Gigabyte, ram=Ram [id= 0precio=260.0€, hz=2400.0, generacion=16], modelo=GeForce GTX1660, precio=833.0€], TarjetaGrafica [id=0, marca=MSI, ram=Ram [id= 0precio=296.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=1560.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, getPrecio()=21.0, getMarca()=HP], Raton [botones=5, inalambrico=true, getPrecio()=559.0, getMarca()=Logitech], Teclado [tipo=Mecánico, getPrecio()=419.0, getMarca()=The G-LAB]]]
+Computer [id=0, marca=MSI, precio=4265.0€ 
+ 	 - Procesador=Procesador [id=0, precio=41.0, hz=39.0, marca=DELL]
+ 	 - PlacaBase=PlacaBase [id=0, marca=LENOVO, model=MAG X570, precio=118€]
+ 	 - Rams=[Ram [id= 0precio=389.0€, hz=3200.0, generacion=16], Ram [id= 0precio=41.0€, hz=3200.0, generacion=16], Ram [id= 0precio=181.0€, hz=2400.0, generacion=16], Ram [id= 0precio=423.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=0, marca=Gigabyte, ram=Ram [id= 0precio=181.0€, hz=2400.0, generacion=16], modelo=GeForce GTX1660, precio=585.0€], TarjetaGrafica [id=0, marca=MSI, ram=Ram [id= 0precio=423.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=1338.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, getPrecio()=64.0, getMarca()=HP], Raton [botones=5, inalambrico=true, getPrecio()=593.0, getMarca()=Logitech], Teclado [tipo=Mecánico, getPrecio()=492.0, getMarca()=The G-LAB]]]
+Computer [id=0, marca=MSI, precio=3416.0€ 
+ 	 - Procesador=Procesador [id=0, precio=608.0, hz=39.0, marca=HP]
+ 	 - PlacaBase=PlacaBase [id=0, marca=HP, model=MAG X570, precio=69€]
+ 	 - Rams=[Ram [id= 0precio=121.0€, hz=3200.0, generacion=16], Ram [id= 0precio=197.0€, hz=3200.0, generacion=16], Ram [id= 0precio=94.0€, hz=2400.0, generacion=16], Ram [id= 0precio=368.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=0, marca=Gigabyte, ram=Ram [id= 0precio=94.0€, hz=2400.0, generacion=16], modelo=GeForce GTX1660, precio=158.0€], TarjetaGrafica [id=0, marca=MSI, ram=Ram [id= 0precio=368.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=971.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, getPrecio()=385.0, getMarca()=HP], Raton [botones=5, inalambrico=true, getPrecio()=340.0, getMarca()=Logitech], Teclado [tipo=Mecánico, getPrecio()=105.0, getMarca()=The G-LAB]]]
+Computer [id=0, marca=MSI, precio=4005.0€ 
+ 	 - Procesador=Procesador [id=0, precio=395.0, hz=39.0, marca=LENOVO]
+ 	 - PlacaBase=PlacaBase [id=0, marca=ASUS, model=MAG X570, precio=312€]
+ 	 - Rams=[Ram [id= 0precio=515.0€, hz=3200.0, generacion=16], Ram [id= 0precio=468.0€, hz=3200.0, generacion=16], Ram [id= 0precio=68.0€, hz=2400.0, generacion=16], Ram [id= 0precio=427.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=0, marca=Gigabyte, ram=Ram [id= 0precio=68.0€, hz=2400.0, generacion=16], modelo=GeForce GTX1660, precio=488.0€], TarjetaGrafica [id=0, marca=MSI, ram=Ram [id= 0precio=427.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=485.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, getPrecio()=277.0, getMarca()=HP], Raton [botones=5, inalambrico=true, getPrecio()=529.0, getMarca()=Logitech], Teclado [tipo=Mecánico, getPrecio()=41.0, getMarca()=The G-LAB]]]

@@ -28,13 +28,17 @@
 		<property name="hz" value="2400"></property>
 		<property name="generacion" value="16"></property>
 	</bean>
+	<bean id="goodram2" class="modelo.entidad.Ram">
+		<property name="precio" value="50"></property> 
+		<property name="hz" value="3200"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
 	<!-- Lista de RAMS -->
 	<bean id="listRam" class="java.util.ArrayList">
 		<constructor-arg>
 			<list value-type="modelo.entidad.Ram">
 				<ref bean="corsair"/>
 				<ref bean="kingston"/>
-				<ref bean="goodram"/>
 			</list>
 		</constructor-arg>
 	</bean>
@@ -56,7 +60,7 @@
 	
 	<bean id="msi" class="modelo.entidad.TarjetaGrafica">
 		<property name="marca" value="MSI"></property>
-		<property name="ram" ref="goodram"></property>
+		<property name="ram" ref="goodram2"></property>
 		<property name="modelo" value="GeForce RTX3070"></property>
 		<property name="precio" value="999"></property>
 	</bean>

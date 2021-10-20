@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Placa Base -->
+	<bean id="msimag" class="modelo.entidad.PlacaBase">
+		<property name="marca" value="MSI"></property>
+		<property name="model" value="MAG X570"></property>
+		<property name="precio" value="200"></property>
+	</bean>
+
+	<!-- RAMS -->
+	<bean id="corsair" class="modelo.entidad.Ram">
+		<property name="precio" value="96"></property> 
+		<property name="hz" value="3200"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	
+	<bean id="kingston" class="modelo.entidad.Ram">
+		<property name="precio" value="76"></property> 
+		<property name="hz" value="3200"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	
+	<bean id="goodram" class="modelo.entidad.Ram">
+		<property name="precio" value="25"></property> 
+		<property name="hz" value="2400"></property>
+		<property name="generacion" value="16"></property>
+	</bean>
+	<!-- Lista de RAMS -->
+	<bean id="listRam" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="modelo.entidad.Ram">
+				<ref bean="corsair"/>
+				<ref bean="kingston"/>
+				<ref bean="goodram"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- Procesador -->
+	<bean id="amd" class="modelo.entidad.Procesador">
+		<property name="marca" value="amd"></property>
+		<property name="precio" value="299"></property>
+		<property name="hz" value="39"></property>
+	</bean>
+	
+	<!-- Tarjetas Graficas -->
+	<bean id="gigabyte" class="modelo.entidad.TarjetaGrafica">
+		<property name="marca" value="Gigabyte"></property>
+		<property name="ram" ref="goodram"></property>
+		<property name="modelo" value="GeForce GTX1660"></property>
+		<property name="precio" value="195"></property>
+	</bean>
+	
+	<bean id="msi" class="modelo.entidad.TarjetaGrafica">
+		<property name="marca" value="MSI"></property>
+		<property name="ram" ref="goodram"></property>
+		<property name="modelo" value="GeForce RTX3070"></property>
+		<property name="precio" value="999"></property>
+	</bean>
+	
+	<!-- Lista de Tarjetas Graficas -->
+	<bean id="listGraficas" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="modelo.entidad.TarjetaGrafica">
+				<ref bean="gigabyte"/>
+				<ref bean="msi"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<!-- Perifericos -->
+	<bean id="monitor" class="modelo.entidad.Monitor">
+		<property name="precio" value="150"></property>
+		<property name="marca" value="HP"></property>
+		<property name="hz" value="166"></property>
+		<property name="tamaño" value="25"></property>
+	</bean>
+	
+	<bean id="raton" class="modelo.entidad.Raton">
+		<property name="precio" value="220"></property>
+		<property name="marca" value="Logitech"></property>
+		<property name="botones" value="5"></property>
+		<property name="inalambrico" value="true"></property>
+	</bean>
+	
+	<bean id="teclado" class="modelo.entidad.Teclado">
+		<property name="precio" value="75"></property>
+		<property name="marca" value="The G-LAB"></property>
+		<property name="tipo" value="Mecánico"></property>
+	</bean>
+	
+	<!-- Lista de Perifericos -->
+	<bean id="listPerifericos" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="modelo.entidad.Perifericos">
+				<ref bean="monitor"/>
+				<ref bean="raton"/>
+				<ref bean="teclado"/>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	
+	<!-- Ordenador -->
+	
+	<bean id="ordenador" class="modelo.entidad.Ordenador">
+		<property name="marca" value="MSI"></property>
+		<property name="precio" value="3250.0"></property>
+		<property name="procesador" ref="amd"></property>
+		<property name="placaBase" ref="msimag"></property>
+		<property name="listaRam" ref="listRam"></property>	
+		<property name="listTarjetaGrafica" ref="listGraficas"></property>
+		<property name="listPerifericos" ref="listPerifericos"></property>
+		
+	</bean>
+</beans>

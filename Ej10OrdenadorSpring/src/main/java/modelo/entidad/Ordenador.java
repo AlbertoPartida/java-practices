@@ -80,34 +80,34 @@ public class Ordenador {
 	}
 	
 	
-	public double getTotalPriceComponents() {
+	public double getPrecioTotalComponenets() {
 		
 		return this.getPlacaBase().getPrecio() + this.getProcesador().getPrecio()
-				+ this.getPerifericsPrice() + this.getRamsPrice() + this.getGraphicTargetsPrice();
+				+ this.getPrecioPrerifericos() + this.getPrecioRAMS() + this.getPrecioTarjetasGraficas();
 	}
 	
-	public double getPerifericsPrice() {
-		double perifericsPrice = 0;
+	public double getPrecioPrerifericos() {
+		double precioPerifericos = 0;
 		for (Periferico per: this.getListPerifericos()) {
-			perifericsPrice = perifericsPrice + per.getPrecio();
+			precioPerifericos = precioPerifericos + per.getPrecio();
 		}
-		return perifericsPrice;
+		return precioPerifericos;
 	}
 	
-	public double getRamsPrice() {
-		double ramsPrice = 0;
+	public double getPrecioRAMS() {
+		double precioRams = 0;
 		for (Ram ram: this.getListaRam()) {
-			ramsPrice = ramsPrice + ram.getPrecio();
+			precioRams = precioRams + ram.getPrecio();
 		}
-		return ramsPrice;
+		return precioRams;
 	}
 	
-	public double getGraphicTargetsPrice() {
-		double targetsPrice = 0;
+	public double getPrecioTarjetasGraficas() {
+		double precioTarjetasGraficas = 0;
 		for (TarjetaGrafica targ: this.getListTarjetaGrafica()) {
-			targetsPrice = targetsPrice + targ.getPrecio();
+			precioTarjetasGraficas = precioTarjetasGraficas + targ.getPrecio();
 		}
-		return targetsPrice;
+		return precioTarjetasGraficas;
 	}
 	
 	@Override

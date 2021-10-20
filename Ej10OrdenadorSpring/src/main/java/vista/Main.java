@@ -16,7 +16,7 @@ public class Main {
 		context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		Ordenador ordenador = context.getBean("ordenador", Ordenador.class);
 		System.out.println(ordenador);
-		System.out.println("Precio original: " + ordenador.getTotalPriceComponents());
+		System.out.println("Precio original: " + ordenador.getPrecioTotalComponenets());
 		
 	}
 

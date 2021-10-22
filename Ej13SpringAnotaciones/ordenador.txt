@@ -1,0 +1,18 @@
+Computer [id=1, marca=ASUS, precio=4906.0€ 
+ 	 - Procesador=Procesador [id=1, precio=229.0, hz=39.0, marca=MSI]
+ 	 - PlacaBase=PlacaBase [id=1, marca=HP, model=MAG X570, precio=632€]
+ 	 - Rams=[Ram [id= 2 precio=94.0€, hz=3200.0, generacion=16], Ram [id= 3 precio=398.0€, hz=2400.0, generacion=16], Ram [id= 4 precio=202.0€, hz=3200.0, generacion=16], Ram [id= 1 precio=366.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=2, marca=MSI, ram=Ram [id= 4 precio=202.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=1173.0€], TarjetaGrafica [id=1, marca=ASUS, ram=Ram [id= 3 precio=398.0€, hz=2400.0, generacion=16], modelo=GeForce RTX3070, precio=365.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, Precio=660.0, Marca=HP], Raton [botones=5, inalambrico=true, Precio=205.0, Marca=LENOVO], Teclado [tipo=mecanico, Precio=582.0, Marca=HP]]]
+Computer [id=1, marca=DELL, precio=5961.0€ 
+ 	 - Procesador=Procesador [id=1, precio=722.0, hz=39.0, marca=HP]
+ 	 - PlacaBase=PlacaBase [id=1, marca=LENOVO, model=MAG X570, precio=789€]
+ 	 - Rams=[Ram [id= 2 precio=378.0€, hz=3200.0, generacion=16], Ram [id= 3 precio=90.0€, hz=2400.0, generacion=16], Ram [id= 4 precio=217.0€, hz=3200.0, generacion=16], Ram [id= 1 precio=371.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=2, marca=MSI, ram=Ram [id= 4 precio=217.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=1927.0€], TarjetaGrafica [id=1, marca=HP, ram=Ram [id= 3 precio=90.0€, hz=2400.0, generacion=16], modelo=GeForce RTX3070, precio=424.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, Precio=603.0, Marca=DELL], Raton [botones=5, inalambrico=true, Precio=364.0, Marca=ASUS], Teclado [tipo=mecanico, Precio=76.0, Marca=DELL]]]
+Computer [id=1, marca=LENOVO, precio=4673.0€ 
+ 	 - Procesador=Procesador [id=1, precio=283.0, hz=39.0, marca=ASUS]
+ 	 - PlacaBase=PlacaBase [id=1, marca=LENOVO, model=MAG X570, precio=620€]
+ 	 - Rams=[Ram [id= 2 precio=274.0€, hz=3200.0, generacion=16], Ram [id= 3 precio=133.0€, hz=2400.0, generacion=16], Ram [id= 4 precio=357.0€, hz=3200.0, generacion=16], Ram [id= 1 precio=693.0€, hz=3200.0, generacion=16]]
+ 	 - Tarjetas Graficas=[TarjetaGrafica [id=2, marca=MSI, ram=Ram [id= 4 precio=357.0€, hz=3200.0, generacion=16], modelo=GeForce RTX3070, precio=185.0€], TarjetaGrafica [id=1, marca=MSI, ram=Ram [id= 3 precio=133.0€, hz=2400.0, generacion=16], modelo=GeForce RTX3070, precio=1162.0€]]
+ 	 - Perifericos=[Monitor [hz=166.0, tamaño=25.0, Precio=587.0, Marca=MSI], Raton [botones=5, inalambrico=true, Precio=121.0, Marca=LENOVO], Teclado [tipo=mecanico, Precio=258.0, Marca=ASUS]]]
